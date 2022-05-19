@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Demo</title>
+    <!-- <script src="./jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            console.log($("a[title='product']").html());
+            const buttonObj = $('button[disabled]');
+            console.log(buttonObj);
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#" title="home">Home</a>
+        </li>
+        <li>
+            <a href="#" title="product">Product & Services</a>
+        </li>
+        <li>
+            <a href="#" title="contact">Contact US</a>
+        </li>
+    </ul>
+
+    <button disabled> Place Order</button>
+    <button> Remove Order</button>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Qty</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Samsung X</td>
+                <td>262</td>
+                <td>65000</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Iphone X</td>
+                <td>22</td>
+                <td>75000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>OppoX</td>
+                <td>2</td>
+                <td>15000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
