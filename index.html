@@ -13,10 +13,23 @@
             const div3 = $('#div3');
             console.log(div3.html())
 
+            //accessing multiple id with , selector
+
+            const multipleDiv = $('#div1,#div2,#div4');
+            console.log('multiple div =', multipleDiv)
             //accessing element with class property selector
 
-            const matchDivs = $('.div-class');
+            //accessing element with nameTag
+            const nameTag = $('span');
+            console.log('Name Tag =', nameTag.html());
+            //accessing first instance of an element array
+            const matchDivs = $('.div-class:first');
             console.log(matchDivs)
+
+            //accessing parent - child element
+            const p = $('div p span');
+            console.log('p value is=', p.html());
+
             for (let i = 0; i < matchDivs.length; i++) {
                 console.log(matchDivs[i].innerHTML);
             }
@@ -44,11 +57,17 @@
 
     <div id="div3" class="div-class">
         Div3
+        <p>
+            this is a para
+            <span>This is a Span</span>
+
+        </p>
     </div>
     <div id="div4">
         Div4
     </div>
 
+    <span>This is a footer element</span>
 </body>
 
 </html>
