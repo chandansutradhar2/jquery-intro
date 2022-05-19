@@ -9,22 +9,29 @@
 
     <script>
         $(document).ready(function () {
-            //null check safe way of doing iteration
-            $('tbody tr').each(function (idx, elem) {
-                alert(elem);
-                console.log(idx, elem)
-            });
+            // $('tbody tr').each((idx, trelem) => {
+            //     $('td').each((index, tdelem) => {
+            //         if (index == 3) {
+            //             debugger;
+            //             tdelem.innerHTML = ((parseInt(tdelem.innerHTML) * 90) / 100)
+            //         }
+            //     })
+            // })
 
-            //old way using javascript
-            const tr = $('tbody tr');
-            for (let i = 0; i < tr.length; i++) {
-                //indexoutofbound exception
-            }
+
+
+            setTimeout(() => {
+                $('#avatar').attr('src', './images/account.png');
+            }, 4000)
+
+
         });
     </script>
 </head>
 
 <body>
+    <img src="./images/user.png" alt="guest" id="avatar" style="width: 100px;height: 100px;margin: 2rem;" />
+
     <ul>
         <li>
             <a href="#" title="home">Home</a>
@@ -55,7 +62,7 @@
                 <td>1</td>
                 <td>Samsung X</td>
                 <td>262</td>
-                <td>65000</td>
+                <td id="price">65000</td>
             </tr>
             <tr>
                 <td>2</td>
