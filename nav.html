@@ -9,10 +9,17 @@
 
     <script>
         $(document).ready(function () {
+            //null check safe way of doing iteration
+            $('tbody tr').each(function (idx, elem) {
+                alert(elem);
+                console.log(idx, elem)
+            });
 
-            console.log($("a[title='product']").html());
-            const buttonObj = $('button[disabled]');
-            console.log(buttonObj);
+            //old way using javascript
+            const tr = $('tbody tr');
+            for (let i = 0; i < tr.length; i++) {
+                //indexoutofbound exception
+            }
         });
     </script>
 </head>
@@ -51,7 +58,7 @@
                 <td>65000</td>
             </tr>
             <tr>
-                <td>1</td>
+                <td>2</td>
                 <td>Iphone X</td>
                 <td>22</td>
                 <td>75000</td>
