@@ -9,15 +9,19 @@
 
     <script>
         $(document).ready(function () {
-            console.log($('h1').html());
-            console.log($('p').html())
-            $('p').hide();
-            setTimeout(() => {
-                $('p').show();
-            }, 3000)
-            // $('div').hide(4000, () => {
-            //     $('div').show();
-            // });
+            //accessing element with id property selector
+            const div3 = $('#div3');
+            console.log(div3.html())
+
+            //accessing element with class property selector
+
+            const matchDivs = $('.div-class');
+            console.log(matchDivs)
+            for (let i = 0; i < matchDivs.length; i++) {
+                console.log(matchDivs[i].innerHTML);
+            }
+
+
         });
     </script>
 </head>
@@ -28,17 +32,20 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eum eius odit sit. Ratione saepe pariatur
         inventore assumenda, modi tempore non consectetur omnis aspernatur dicta, eos, repellendus ipsum perspiciatis
         dolorum.</p>
-    <div>
+
+
+    <div id="div1" class="div-class">
         Div1
     </div>
 
-    <div>
+    <div id="div2" class="div-class">
         Div2
     </div>
-    <div>
+
+    <div id="div3" class="div-class">
         Div3
     </div>
-    <div>
+    <div id="div4">
         Div4
     </div>
 
