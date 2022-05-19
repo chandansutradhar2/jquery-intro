@@ -5,17 +5,36 @@
     <meta charset="utf-8">
     <title>JQuery Demo</title>
     <!-- <script src="./jquery.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script>
+        //initializing jquery with DOM
+        jQuery(document).ready(function () {
+            alert('DOM loaded')
+            //all your jquery stuff below
+            const divs = jQuery('div');
+            console.log(divs);
+        });
+
+    </script>
 </head>
 
 <body>
 
+    <div>
+        Div1
+    </div>
 
+    <div>
+        Div2
+    </div>
+    <div>
+        Div3
+    </div>
+    <div>
+        Div4
+    </div>
 
-    // Your code goes here.
-
-    </script>
 </body>
 
 </html>
