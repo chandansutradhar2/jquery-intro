@@ -9,7 +9,20 @@
 
     <script>
         $(document).ready(function () {
-            console.log($(':input'));
+
+            $('#login').click((eventData) => {
+
+                console.log('login invoked', eventData.target.value);
+            });
+
+            $('#signup').dblclick((eventData) => {
+                alert('signup invoked');
+            });
+
+
+            $('#email').blur((eventData) => {
+                console.log(eventData.target.value)
+            })
         });
     </script>
 </head>
@@ -19,9 +32,12 @@
     <h1>Login Here</h1>
 
     <div style="display: flex; justify-content:center; width:50vw; flex-direction: column;">
-        <input type="text" value="demo@gmail.com" placeholder="Enter Email" />
+        <input id="email" type="email" value="demo@gmail.com" placeholder="Enter Email" />
+        <span id="email-error">Email Id format is invalid</span>
+        <span id="email-error">Email Id Required</span>
         <input type="password" value="Teng!n@404" placeholder="Enter Password" />
-        <button>Login</button>
+        <button id="login">Login</button>
+        <button id="signup">New here? Create Account</button>
     </div>
 </body>
 
