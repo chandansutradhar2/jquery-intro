@@ -8,17 +8,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-        //initializing jquery with DOM
         $(document).ready(function () {
-            alert('DOM loaded')
-            //all your jquery stuff below
-            const divs = $('div');
-            console.log(divs);
+            console.log($('h1').html());
+            console.log($('p').html())
         });
     </script>
 </head>
 
-<body onload="alert('body onload')">
+<body>
+
+    <h1>Welcome to JQuery Training</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eum eius odit sit. Ratione saepe pariatur
+        inventore assumenda, modi tempore non consectetur omnis aspernatur dicta, eos, repellendus ipsum perspiciatis
+        dolorum.</p>
     <div>
         Div1
     </div>
