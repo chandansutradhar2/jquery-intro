@@ -9,10 +9,16 @@
                 $("#test1").text("Hello world!");
             });
             $("#btn2").click(function () {
-                $("#test2").html("<b>Hello world!</b>");
+                $("#test2").html("<h3>Hello world!</h3>");
             });
             $("#btn3").click(function () {
-                $("#test3").val("Dolly Duck");
+                $("#test3").val("Chandan Naresh");
+            });
+            $("#btn4").click(function () {
+                alert($("#test3").val());
+                $("#test3").val((index, value) => {
+                    console.log(index, value)
+                });
             });
         });
     </script>
@@ -28,6 +34,7 @@
     <button id="btn1">Set Text</button>
     <button id="btn2">Set HTML</button>
     <button id="btn3">Set Value</button>
+    <button id="btn4">Get Name</button>
 
 </body>
 
