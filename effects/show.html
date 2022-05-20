@@ -10,12 +10,19 @@
     <script>
         $(document).ready(function () {
             $("#show").click(function () {
-                $('p').show(2000);
+                $('p').show(2000, function () {
+                    alert('after show effect');
+                });
+
             });
+
+
 
             $("#hide").click(function () {
                 $('p').hide();
+                alert('after hide effects');
             });
+
 
         });
     </script>
