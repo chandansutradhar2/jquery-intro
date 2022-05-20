@@ -19,8 +19,10 @@
 
 
             $("#hide").click(function () {
-                $('p').hide();
-                alert('after hide effects');
+                $('p').hide(0, () => {
+                    alert('after hide effects');
+                });
+
             });
 
 
