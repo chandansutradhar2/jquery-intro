@@ -2,11 +2,19 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
 
-app.get("/products", (req, res) => {
+app.get("/api/v2/score", (req, res) => {
+	let score = Math.floor(Math.random() * 1000);
+
+	res.send({ score: score, wicket: 4, over: 8 });
+});
+
+app.get("/api/v2/products", (req, res) => {
 	res.send({
 		result: true,
 		products: [

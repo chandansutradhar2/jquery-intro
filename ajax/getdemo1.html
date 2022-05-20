@@ -6,7 +6,9 @@
     <script>
         $(document).ready(function () {
             $("button").click(function () {
-                $("#div1").load("demo_test.txt");
+                $("#div1").load("demo_test.txt", null, (responseText, textStatus, xhr) => {
+                    console.log(responseText, textStatus, xhr);
+                });
             });
         });
     </script>
