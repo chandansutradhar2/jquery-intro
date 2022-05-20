@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Demo</title>
+    <!-- <script src="./jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $('p').show();
+            });
+
+            $("#hide").click(function () {
+                $('p').hide();
+            });
+
+        });
+    </script>
+</head>
+
+<body style="margin: 20em;">
+    <div style="display: flex; justify-content:center; width:50vw; flex-direction: column;">
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci consequuntur pariatur quaerat expedita
+            sunt doloremque molestias ex deserunt, distinctio, voluptate, reprehenderit sit iure facilis quas minima
+            dignissimos voluptatibus! Et, commodi!</p>
+    </div>
+</body>
+
+</html>
